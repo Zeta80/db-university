@@ -1,0 +1,24 @@
+1. 
+// da modificare
+SELECT COUNT(`id`) as `number_of_iscription`, YEAR(`enrolment_date`) AS `years`
+FROM `students`
+GROUP BY  `enrolment_date`;
+
+
+
+2.
+SELECT COUNT(`id`) as `teacher`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`;
+
+3.
+SELECT COUNT(`exam_id`) AS `exam_id`, AVG(`vote`)
+FROM `exam_student`
+GROUP BY `vote`;
+
+4.
+SELECT COUNT(`degrees` . `id`) AS `cours`, `department_id`
+FROM `degrees`
+INNER JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
+GROUP BY `department_id`;
